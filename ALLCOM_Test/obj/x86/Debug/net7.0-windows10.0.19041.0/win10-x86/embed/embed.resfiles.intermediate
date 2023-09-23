@@ -1,0 +1,16 @@
+App.xbf
+MainWindow.xbf
+Styles\FontSizes.xbf
+Styles\TextBlock.xbf
+Styles\Thickness.xbf
+Views\CommendsPage.xbf
+Views\DatesPage.xbf
+Views\HelpDetailPage.xbf
+Views\HelpPage.xbf
+Views\MainCanvasPage.xbf
+Views\MainPage.xbf
+Views\PartsDetailControl.xbf
+Views\PartsPage.xbf
+Views\ResourceDictionary1.xbf
+Views\SettingsPage.xbf
+Views\ShellPage.xbf

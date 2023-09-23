@@ -1,0 +1,10 @@
+﻿{
+    "profiles": {
+      "ALLCOM_Test (Package)": {
+        "commandName": "MsixPackage"
+      },
+      "ALLCOM_Test (Unpackaged)": {
+        "commandName": "Project"
+      }
+    }
+}

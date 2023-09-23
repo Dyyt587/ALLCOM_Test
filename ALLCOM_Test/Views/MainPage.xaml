@@ -1,0 +1,132 @@
+﻿<Page
+    x:Class="ALLCOM_Test.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="using:CommunityToolkit.WinUI.UI.Controls"
+
+    xmlns:behaviors="using:ALLCOM_Test.Behaviors" xmlns:local="using:ALLCOM_Test.Views" 
+    behaviors:NavigationViewHeaderBehavior.HeaderMode="Never"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <DataTemplate x:Key="ContactListViewTemplate" x:DataType="local:DataListDatas">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="36"/>
+
+                </Grid.ColumnDefinitions>
+                <AppBarButton x:Name="HoverButton" IsTabStop="False" HorizontalAlignment="Right" Visibility="Visible"
+                              Width="36" Click="HoverButton_Click"
+                                Grid.Column="1" Label="Button"  LabelPosition="Collapsed" Margin="0,0,0,0" >
+                    <FontIcon Glyph="&#xE769;" />
+                </AppBarButton>
+
+                <TextBlock Grid.Column="0" Text="{x:Bind Name}" x:Phase="1" 
+                           HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,5,0,5"/>
+
+
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+
+    <Grid x:Name="ContentArea" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="6.18*"/>
+            <ColumnDefinition Width="6"/>
+            <ColumnDefinition Width="1.1*"/>
+        </Grid.ColumnDefinitions>
+        <controls:GridSplitter Grid.Column="1"   
+                               Width="6"
+                                VerticalAlignment="Stretch">
+            <controls:GridSplitter.RenderTransform>
+                <TranslateTransform X="-2" />
+            </controls:GridSplitter.RenderTransform>
+        </controls:GridSplitter>
+        <!--开始右边部分-->
+        <Pivot  Grid.Column="2">
+            <PivotItem Header="数据概览">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition MinHeight="60" Height="1*"/>
+                        <RowDefinition Height="7.5*"/>
+                    </Grid.RowDefinitions>
+                    <Border Grid.Row="0" Background="red" Margin="0,10,0,4"/>
+
+                    <ListView Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                              SelectionMode="Extended"
+
+                         x:Name="BaseExample"
+                        ItemTemplate="{StaticResource ContactListViewTemplate}"
+                        ItemsSource="{x:Bind dateSource}"
+                        BorderThickness="1"
+                        MinWidth="120"
+                        MinHeight="250"
+                        />
+
+                </Grid>
+            </PivotItem>
+            <PivotItem Header="属性">
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition MinHeight="100" Height="120"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Border Grid.Row="0" Background="red" Height="100"/>
+                    <!--<Border Grid.Row="1" Background="black" Height="Auto"/>-->
+                    <!-- To create this sample, add/change the following properties onto the code for the base example above: -->
+
+                    <!-- XAML Code -->
+
+
+
+
+
+
+                </Grid>
+
+
+
+
+
+
+
+
+
+
+
+            </PivotItem>
+        </Pivot>
+
+        <!--结束右边部分-->
+        <!--开始中间部分-->
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="6"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <!--<Border Background="red" Grid.Row="0"/>
+            <Border Background="red" Grid.Row="2"/>-->
+            <controls:GridSplitter Grid.Row="1"   
+                               Height="6" Margin="0,0,2,0"
+                                HorizontalAlignment="Stretch">
+                <controls:GridSplitter.RenderTransform>
+                    <TranslateTransform Y="-2" />
+                </controls:GridSplitter.RenderTransform>
+            </controls:GridSplitter>
+
+
+            <TabView Grid.Column="0" Grid.Row="0" 
+                     AddTabButtonClick="TabView_AddButtonClick" 
+                     TabCloseRequested="TabView_TabCloseRequested" 
+                     Loaded="TabView_Loaded" 
+                     Margin="0,0,10,3"
+                     />
+
+
+        </Grid>
+
+    </Grid>
+</Page>
