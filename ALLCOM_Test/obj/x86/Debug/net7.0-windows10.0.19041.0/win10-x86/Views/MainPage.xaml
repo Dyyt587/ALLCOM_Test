@@ -12,7 +12,7 @@
     <Page.Resources>
         <Flyout  x:Key="myColorPickerFlyout"   >
             <StackPanel  >
-                <ColorPicker x:ConnectionId='13' Name="myColorPicker"  AllowFocusOnInteraction="True"
+                <ColorPicker x:ConnectionId='14' Name="myColorPicker"  AllowFocusOnInteraction="True"
              ColorSpectrumShape="Ring"
              IsMoreButtonVisible="True"
              IsColorSliderVisible="True"
@@ -22,7 +22,7 @@
              IsAlphaSliderVisible="False"
              IsAlphaTextInputVisible="True"
              Orientation="Vertical"/>
-                <TextBox x:ConnectionId='14'                                                              AllowFocusOnInteraction="True">
+                <TextBox x:ConnectionId='15'                                                              AllowFocusOnInteraction="True">
                     
                 </TextBox>
             </StackPanel>
@@ -31,8 +31,8 @@
         <Flyout  x:Key="DataRenameFlyout"  >
             <StackPanel    >
                 <TextBlock Text="请输入新名字："/>
-                <TextBox x:ConnectionId='12'  Text="New name "  AllowFocusOnInteraction="True" MinWidth="128" Margin="8,6,0,0"                                    
-                                                                       >
+                <TextBox x:ConnectionId='13'  Text="New name "  AllowFocusOnInteraction="True" MinWidth="128" Margin="8,6,0,0"                                    
+                                                                                    >
                 </TextBox>
             </StackPanel>
         </Flyout>
@@ -58,8 +58,8 @@
                     </AppBarButton.Icon  >
                     <!--<FontIcon Glyph="&#xE769;" />-->
                 </AppBarButton >
-                <Border Grid.Column="0" Background="RoyalBlue" CornerRadius="1.4" Width="2.8" Height="16" Margin="-25,0,0,0"/>
-                <TextBlock x:ConnectionId='11' Grid.Column="1"                                                   
+                <Border x:ConnectionId='11' Grid.Column="0"                                              CornerRadius="1.4" Width="2.8" Height="16" Margin="-25,0,0,0"/>
+                <TextBlock x:ConnectionId='12' Grid.Column="1"                                                   
                            HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,5,0,5" Padding="0,9,120,9"/>
             </Grid>
         </DataTemplate>
@@ -80,7 +80,7 @@
 
     </Page.Resources>
 
-    <Grid x:ConnectionId='15' x:Name="ContentArea" >
+    <Grid x:ConnectionId='16' x:Name="ContentArea" >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="6.18*"/>
             <ColumnDefinition Width="6"/>
@@ -103,7 +103,7 @@
                     </Grid.RowDefinitions>
                     <Border Grid.Row="0" Background="red" Margin="0,10,0,4"/>
 
-                    <ListView x:ConnectionId='17' Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                    <ListView x:ConnectionId='18' Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                               SelectionMode="Multiple" IsMultiSelectCheckBoxEnabled="False" IsRightTapEnabled="True"
 
                          x:Name="BaseExample"
@@ -167,14 +167,12 @@
             </controls:GridSplitter>
 
 
-            <TabView x:ConnectionId='16' Grid.Column="0" Grid.Row="0" 
+            <TabView x:ConnectionId='17' Grid.Column="0" Grid.Row="0" 
                                                                 
                                                                    
                                              
                      Margin="0,0,10,3"
                      />
-
-
         </Grid>
 
     </Grid>

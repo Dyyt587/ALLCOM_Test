@@ -16,12 +16,17 @@ using CommunityToolkit.Mvvm;
 using System.ComponentModel;
 using CommunityToolkit.Mvvm.ComponentModel;
 using System.Xml.Linq;
+using Windows.UI;
+using Microsoft.UI;
+//using System.Drawing;
+//using Color = System.Drawing.Color;
+//using SystemColors = System.Drawing.Color;
 
 namespace ALLCOM_Test.Views;
 /// <summary>
 /// 单例模式的实现
 /// </summary>
-public class MainPage_Singleton
+public class MainPage_Singleton : ObservableObject
 {
     // 定义一个静态变量来保存类的实例
     private static MainPage_Singleton? uniqueInstance;
@@ -29,22 +34,14 @@ public class MainPage_Singleton
     // 定义一个标识确保线程同步
     private static readonly object locker = new();
 
+    string _DataList_ID;
     public string DataList_ID
     {
-        get; set;
+        get => _DataList_ID;
+        set => SetProperty(ref _DataList_ID, value);
+
     }
-    //public string DataList_Name
-    //{
-    //    get
-    //    {
-    //        return MainPage.
 
-
-    //    }
-    //    set
-    //    {
-    //    }
-    //}
     // 定义私有构造函数，使外界不能创建该类实例
     private MainPage_Singleton()
     {
@@ -84,11 +81,19 @@ public class DataListDatas : ObservableObject
     }
     public string ID
     {
-        get; set;
+        get; private set;
     }
+    private double _Data;
     public double Data
     {
-        get; set;
+        get => _Data;
+        set => SetProperty(ref _Data, value);
+    }
+    private SolidColorBrush _DataColor;
+    public SolidColorBrush DataColor
+    {
+        get => _DataColor;
+        set => SetProperty(ref _DataColor, value);
     }
     public bool is_View
     {
@@ -101,6 +106,8 @@ public class DataListDatas : ObservableObject
 
     public DataListDatas(string dataName, double data, string id)
     {
+ 
+        DataColor = new SolidColorBrush(Colors.RoyalBlue); 
         DataName = dataName;
         ID = id;
         Data = data;
@@ -166,7 +173,7 @@ public sealed partial class MainPage : Page
         TabViewItem newItem = new TabViewItem();
 
         newItem.Header = $"Document {index}";
-        newItem.IconSource = new Microsoft.UI.Xaml.Controls.SymbolIconSource() { Symbol = Symbol.Document };
+        newItem.IconSource = new SymbolIconSource() { Symbol = Symbol.Document };
 
         // The content of the tab is often a frame that contains a page, though it could be any UIElement.
         Frame frame = new Frame();
@@ -191,7 +198,6 @@ public sealed partial class MainPage : Page
 
     private void HoverButton_Click(object sender, RoutedEventArgs e)
     {
-
         AppBarButton? button = sender as AppBarButton;
         Grid parent = button.FindParent<Grid>();
         foreach (var item in dateSource)
@@ -256,9 +262,12 @@ public sealed partial class MainPage : Page
     private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
     {
         var textBox = sender as TextBox;
-        string str = mainPage_Singleton.DataList_ID.ToString();
-
-        dateSource[Convert.ToInt32(str)].DataName = textBox.Text;
-        //dateSource[Convert.ToInt32(str)].DataName = textBox.Text;
+        //textBox.Background = new SolidColorBrush(Colors.RoyalBlue);
+        // string str = mainPage_Singleton.DataList_ID.ToString();
+        if (textBox != null)
+        {
+            var str = textBox.Tag as string;
+            dateSource[Convert.ToInt32(str)].DataName = textBox.Text;
+        }
     }
 }

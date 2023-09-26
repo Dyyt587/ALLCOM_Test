@@ -32,7 +32,7 @@
             <StackPanel    >
                 <TextBlock Text="请输入新名字："/>
                 <TextBox  Text="New name "  AllowFocusOnInteraction="True" MinWidth="128" Margin="8,6,0,0" TextChanged="TextBox_TextChanged"  
-                          Tag="{x:Bind mainPage_Singleton.DataList_ID}">
+                          Tag="{x:Bind mainPage_Singleton.DataList_ID, Mode=OneWay}">
                 </TextBox>
             </StackPanel>
         </Flyout>
@@ -58,7 +58,7 @@
                     </AppBarButton.Icon  >
                     <!--<FontIcon Glyph="&#xE769;" />-->
                 </AppBarButton >
-                <Border Grid.Column="0" Background="RoyalBlue" CornerRadius="1.4" Width="2.8" Height="16" Margin="-25,0,0,0"/>
+                <Border Grid.Column="0" Background="{x:Bind DataColor, Mode=OneWay}" CornerRadius="1.4" Width="2.8" Height="16" Margin="-25,0,0,0"/>
                 <TextBlock Grid.Column="1" Text="{x:Bind DataName, Mode=OneWay}" x:Phase="1" 
                            HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,5,0,5" Padding="0,9,120,9"/>
             </Grid>
@@ -173,8 +173,6 @@
                      Loaded="TabView_Loaded" 
                      Margin="0,0,10,3"
                      />
-
-
         </Grid>
 
     </Grid>
