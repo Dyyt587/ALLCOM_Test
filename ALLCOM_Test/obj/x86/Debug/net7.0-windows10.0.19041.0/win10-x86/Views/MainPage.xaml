@@ -10,28 +10,76 @@
     mc:Ignorable="d">
 
     <Page.Resources>
-        <DataTemplate x:Key="ContactListViewTemplate"                                 >
-            <Grid x:ConnectionId='3'>
+        <Flyout  x:Key="myColorPickerFlyout"   >
+            <StackPanel  >
+                <ColorPicker x:ConnectionId='14' Name="myColorPicker"  AllowFocusOnInteraction="True"
+             ColorSpectrumShape="Ring"
+             IsMoreButtonVisible="True"
+             IsColorSliderVisible="True"
+             IsColorChannelTextInputVisible="True"
+             IsHexInputVisible="True"
+             IsAlphaEnabled="True"
+             IsAlphaSliderVisible="False"
+             IsAlphaTextInputVisible="True"
+             Orientation="Vertical"/>
+                <TextBox x:ConnectionId='15'                                                              AllowFocusOnInteraction="True">
+                    
+                </TextBox>
+            </StackPanel>
+        </Flyout>
+
+        <Flyout  x:Key="DataRenameFlyout"  >
+            <StackPanel    >
+                <TextBlock x:ConnectionId='12' Text="请输入新名字："                                              />
+                <TextBox x:ConnectionId='13'  Text="New name "  AllowFocusOnInteraction="True" MinWidth="128" Margin="8,6,0,0"                                  >
+                </TextBox>
+            </StackPanel>
+        </Flyout>
+
+
+
+
+
+        <DataTemplate x:Key="ContactListViewTemplate"                                  >
+            <Grid x:ConnectionId='9'                                                                                                           >
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4" />
                     <ColumnDefinition />
                     <ColumnDefinition Width="36"/>
 
                 </Grid.ColumnDefinitions>
-                <AppBarButton x:ConnectionId='4' x:Name="HoverButton" IsTabStop="False" HorizontalAlignment="Right" Visibility="Visible"
-                              Width="36"                          
-                                Grid.Column="1" Label="Button"  LabelPosition="Collapsed" Margin="0,0,0,0" >
-                    <FontIcon Glyph="&#xE769;" />
-                </AppBarButton>
-
-                <TextBlock x:ConnectionId='5' Grid.Column="0"                                  
-                           HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,5,0,5"/>
-
-
+                <AppBarButton x:ConnectionId='10' x:Name="HoverButton" IsTabStop="False" HorizontalAlignment="Right" Visibility="Visible"
+                                                     
+                              Width="36"                              
+                                Grid.Column="2" Label="Button"  LabelPosition="Collapsed" Margin="0,0,0,0" >
+                    <AppBarButton.Icon   >
+                        <FontIcon Glyph="&#xE890;"/>
+                    </AppBarButton.Icon  >
+                    <!--<FontIcon Glyph="&#xE769;" />-->
+                </AppBarButton >
+                <Border Grid.Column="0" Background="RoyalBlue" CornerRadius="1.4" Width="2.8" Height="16" Margin="-25,0,0,0"/>
+                <TextBlock x:ConnectionId='11' Grid.Column="1"                                      
+                           HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,5,0,5" Padding="0,9,120,9"/>
             </Grid>
         </DataTemplate>
+
+        <CommandBarFlyout x:ConnectionId='2' Placement="Right" x:Name="CommandBarFlyout1">
+            <!--\-->
+            <AppBarButton x:ConnectionId='3' Label="DataColor" ToolTipService.ToolTip="数据颜色"                            Flyout="{StaticResource myColorPickerFlyout}">
+                <FontIcon Glyph="&#xE790;" />
+            </AppBarButton>
+            <AppBarButton x:ConnectionId='4' Label="Rename" Icon="Rename" ToolTipService.ToolTip="重命名"                            Flyout="{StaticResource DataRenameFlyout}"/>
+            <AppBarButton x:ConnectionId='5' Label="Sorts" Icon="Sort" ToolTipService.ToolTip="排序"                            />
+            <CommandBarFlyout.SecondaryCommands>
+
+                <AppBarButton x:ConnectionId='6' x:Name="ResizeButton1" Label="Resize"                            />
+                <AppBarButton x:ConnectionId='7' x:Name="MoveButton1" Label="Move"                            />
+            </CommandBarFlyout.SecondaryCommands>
+        </CommandBarFlyout>
+
     </Page.Resources>
 
-    <Grid x:ConnectionId='6' x:Name="ContentArea" >
+    <Grid x:ConnectionId='16' x:Name="ContentArea" >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="6.18*"/>
             <ColumnDefinition Width="6"/>
@@ -54,8 +102,8 @@
                     </Grid.RowDefinitions>
                     <Border Grid.Row="0" Background="red" Margin="0,10,0,4"/>
 
-                    <ListView x:ConnectionId='8' Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                              SelectionMode="Extended"
+                    <ListView x:ConnectionId='18' Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                              SelectionMode="Multiple" IsMultiSelectCheckBoxEnabled="False" IsRightTapEnabled="True"
 
                          x:Name="BaseExample"
                         ItemTemplate="{StaticResource ContactListViewTemplate}"
@@ -118,7 +166,7 @@
             </controls:GridSplitter>
 
 
-            <TabView x:ConnectionId='7' Grid.Column="0" Grid.Row="0" 
+            <TabView x:ConnectionId='17' Grid.Column="0" Grid.Row="0" 
                                                                 
                                                                    
                                              

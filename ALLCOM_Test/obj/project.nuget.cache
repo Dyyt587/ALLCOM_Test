@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yX0y9In+1lXZNoyDKwxgxFjMogxsbyicKmuUgyJt4dTf1Rk1Sh7HTUTRcrpA6sAlY7JjVOCLOKrqwqVCf0vzcQ==",
+  "dgSpecHash": "GX7pTkDUBbkdBKyZcRoS+j0SN58YsUBsyW3hcGv0puKVeVePVj0v20Kzsw83h0VInGATIVceLJ9zBnI+Avzttg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\80520\\source\\repos\\ALLCOM_Test - 副本\\ALLCOM_Test\\ALLCOM_Test.csproj",
+  "projectFilePath": "C:\\Users\\80520\\source\\repos\\ALLCOM_Test\\ALLCOM_Test\\ALLCOM_Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\80520\\.nuget\\packages\\colorcode.core\\2.0.13\\colorcode.core.2.0.13.nupkg.sha512",
     "C:\\Users\\80520\\.nuget\\packages\\colorcode.winui\\2.0.13\\colorcode.winui.2.0.13.nupkg.sha512",

@@ -407,7 +407,6 @@ C:\Users\80520\source\repos\ALLCOM_Test\ALLCOM_Test\bin\x86\Debug\net7.0-windows
 C:\Users\80520\source\repos\ALLCOM_Test\ALLCOM_Test\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\hostfxr.dll
 C:\Users\80520\source\repos\ALLCOM_Test\ALLCOM_Test\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\hostpolicy.dll
 C:\Users\80520\source\repos\ALLCOM_Test\ALLCOM_Test\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\mscordaccore.dll
-C:\Users\80520\source\repos\ALLCOM_Test\ALLCOM_Test\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\mscordaccore_x86_x86_7.0.1023.36312.dll
 C:\Users\80520\source\repos\ALLCOM_Test\ALLCOM_Test\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\mscordbi.dll
 C:\Users\80520\source\repos\ALLCOM_Test\ALLCOM_Test\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\mscorrc.dll
 C:\Users\80520\source\repos\ALLCOM_Test\ALLCOM_Test\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\msquic.dll
@@ -1003,3 +1002,9 @@ C:\Users\80520\source\repos\ALLCOM_Test - 副本\ALLCOM_Test\obj\x86\Debug\net7.
 C:\Users\80520\source\repos\ALLCOM_Test - 副本\ALLCOM_Test\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\MainCanvasPage.g.cs
 C:\Users\80520\source\repos\ALLCOM_Test - 副本\ALLCOM_Test\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\MainCanvasPage.xaml
 C:\Users\80520\source\repos\ALLCOM_Test - 副本\ALLCOM_Test\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\MainCanvasPage.xbf
+C:\Users\80520\source\repos\ALLCOM_Test\ALLCOM_Test\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\MainCanvasPage.xbf
+C:\Users\80520\source\repos\ALLCOM_Test\ALLCOM_Test\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\mscordaccore_x86_x86_7.0.1123.42427.dll
+C:\Users\80520\source\repos\ALLCOM_Test\ALLCOM_Test\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\MainCanvasPage.g.i.cs
+C:\Users\80520\source\repos\ALLCOM_Test\ALLCOM_Test\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\MainCanvasPage.g.cs
+C:\Users\80520\source\repos\ALLCOM_Test\ALLCOM_Test\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\MainCanvasPage.xaml
+C:\Users\80520\source\repos\ALLCOM_Test\ALLCOM_Test\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\Views\MainCanvasPage.xbf
