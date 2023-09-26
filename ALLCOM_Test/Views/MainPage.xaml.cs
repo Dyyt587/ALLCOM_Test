@@ -12,6 +12,10 @@ using System.Runtime.InteropServices;
 using CommunityToolkit.WinUI.UI;
 using Microsoft.Graphics.Canvas;
 using Microsoft.UI.Xaml.Controls.Primitives;
+using CommunityToolkit.Mvvm;
+using System.ComponentModel;
+using CommunityToolkit.Mvvm.ComponentModel;
+using System.Xml.Linq;
 
 namespace ALLCOM_Test.Views;
 /// <summary>
@@ -44,7 +48,7 @@ public class MainPage_Singleton
     // 定义私有构造函数，使外界不能创建该类实例
     private MainPage_Singleton()
     {
-        DataList_ID = "null";
+        DataList_ID = string.Empty;
     }
 
     /// <summary>
@@ -70,11 +74,13 @@ public class MainPage_Singleton
 }
 
 
-public class DataListDatas
+public class DataListDatas : ObservableObject
 {
+    private string _DataName;
     public string DataName
     {
-        get; set;
+        get => _DataName;
+        set => SetProperty(ref _DataName, value);
     }
     public string ID
     {
@@ -129,7 +135,7 @@ public sealed partial class MainPage : Page
         ViewModel = App.GetService<MainViewModel>();
         for (int i = 0; i < 20; i++)
         {
-            dateSource.Add(new DataListDatas("data0", 0, i.ToString()));
+            dateSource.Add(new DataListDatas("data"+ i.ToString(), 0, i.ToString()));
         }
 
         InitializeComponent();
@@ -250,7 +256,9 @@ public sealed partial class MainPage : Page
     private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
     {
         var textBox = sender as TextBox;
-        string str = textBox.Tag as string ?? string.Empty;
+        string str = mainPage_Singleton.DataList_ID.ToString();
+
         dateSource[Convert.ToInt32(str)].DataName = textBox.Text;
+        //dateSource[Convert.ToInt32(str)].DataName = textBox.Text;
     }
 }

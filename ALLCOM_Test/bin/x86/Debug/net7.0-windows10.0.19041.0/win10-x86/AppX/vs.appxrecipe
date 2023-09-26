@@ -29,13 +29,13 @@
     <AppXManifest Include="C:\Users\80520\source\repos\ALLCOM_Test\ALLCOM_Test\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-09-26T07:25:32.287</Modified>
+      <Modified>2023-09-26T07:45:37.630</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\80520\source\repos\ALLCOM_Test\ALLCOM_Test\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-09-26T07:25:32.024</Modified>
+      <Modified>2023-09-26T07:45:37.381</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\80520\source\repos\ALLCOM_Test\ALLCOM_Test\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\ALLCOM_Test.runtimeconfig.json">
       <PackagePath>ALLCOM_Test.runtimeconfig.json</PackagePath>
@@ -43,7 +43,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\80520\source\repos\ALLCOM_Test\ALLCOM_Test\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\ALLCOM_Test.dll">
       <PackagePath>ALLCOM_Test.dll</PackagePath>
-      <Modified>2023-09-26T07:25:31.678</Modified>
+      <Modified>2023-09-26T07:45:37.014</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\80520\source\repos\ALLCOM_Test\ALLCOM_Test\appsettings.json">
       <PackagePath>appsettings.json</PackagePath>
@@ -51,7 +51,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\80520\source\repos\ALLCOM_Test\ALLCOM_Test\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\apphost.exe">
       <PackagePath>ALLCOM_Test.exe</PackagePath>
-      <Modified>2023-09-26T07:25:31.683</Modified>
+      <Modified>2023-09-26T07:45:37.029</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\80520\source\repos\ALLCOM_Test\ALLCOM_Test\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\MsixContent\CoreMessagingXP.dll">
       <PackagePath>CoreMessagingXP.dll</PackagePath>
