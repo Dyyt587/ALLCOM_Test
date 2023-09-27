@@ -13,6 +13,8 @@
         <Flyout  x:Key="myColorPickerFlyout"   >
             <StackPanel  >
                 <ColorPicker x:ConnectionId='14' Name="myColorPicker"  AllowFocusOnInteraction="True"
+                                                                      
+                                                                                        
              ColorSpectrumShape="Ring"
              IsMoreButtonVisible="True"
              IsColorSliderVisible="True"
@@ -21,7 +23,7 @@
              IsAlphaEnabled="True"
              IsAlphaSliderVisible="False"
              IsAlphaTextInputVisible="True"
-             Orientation="Vertical"/>
+             Orientation="Vertical"  />
                 <TextBox x:ConnectionId='15'                                                              AllowFocusOnInteraction="True">
                     
                 </TextBox>
@@ -37,7 +39,12 @@
             </StackPanel>
         </Flyout>
 
-
+        <MenuFlyout  x:Key="DataSortFlyout"  >
+            <MenuFlyoutItem Text="Reset"/>
+            <MenuFlyoutSeparator/>
+            <ToggleMenuFlyoutItem Text="Repeat" IsChecked="False"/>
+            <ToggleMenuFlyoutItem Text="Shuffle" IsChecked="True"/>
+        </MenuFlyout>
 
 
 
@@ -61,6 +68,7 @@
                 <Border x:ConnectionId='11' Grid.Column="0"                                              CornerRadius="1.4" Width="2.8" Height="16" Margin="-25,0,0,0"/>
                 <TextBlock x:ConnectionId='12' Grid.Column="1"                                                   
                            HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,5,0,5" Padding="0,9,120,9"/>
+
             </Grid>
         </DataTemplate>
 
@@ -70,7 +78,7 @@
                 <FontIcon Glyph="&#xE790;" />
             </AppBarButton>
             <AppBarButton x:ConnectionId='4' Label="Rename" Icon="Rename" ToolTipService.ToolTip="重命名"                            Flyout="{StaticResource DataRenameFlyout}"/>
-            <AppBarButton x:ConnectionId='5' Label="Sorts" Icon="Sort" ToolTipService.ToolTip="排序"                            />
+            <AppBarButton x:ConnectionId='5' Label="Sorts" Icon="Sort" ToolTipService.ToolTip="排序"                            Flyout="{StaticResource DataSortFlyout}"/>
             <CommandBarFlyout.SecondaryCommands>
 
                 <AppBarButton x:ConnectionId='6' x:Name="ResizeButton1" Label="Resize"                            />
