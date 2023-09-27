@@ -40,10 +40,11 @@
         </Flyout>
 
         <MenuFlyout  x:Key="DataSortFlyout"  >
-            <MenuFlyoutItem Text="Reset"/>
+            <ToggleMenuFlyoutItem Text="升序" IsChecked="False"/>
+            <ToggleMenuFlyoutItem Text="降序" IsChecked="True"/>
             <MenuFlyoutSeparator/>
-            <ToggleMenuFlyoutItem Text="Repeat" IsChecked="False"/>
-            <ToggleMenuFlyoutItem Text="Shuffle" IsChecked="True"/>
+            <ToggleMenuFlyoutItem Text="按名字" IsChecked="False"/>
+            <ToggleMenuFlyoutItem Text="按更新频率" IsChecked="True"/>
         </MenuFlyout>
 
 

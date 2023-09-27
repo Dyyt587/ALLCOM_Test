@@ -1,1 +1,1 @@
-C:\Users\80520\source\repos\ALLCOM_Test\ALLCOM_Test\ALLCOM_Test.csproj;x86
+C:\Users\LENOVO\Desktop\ALLCOM_Test\ALLCOM_Test\ALLCOM_Test.csproj;x86

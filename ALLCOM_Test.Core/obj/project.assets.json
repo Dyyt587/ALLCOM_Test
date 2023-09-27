@@ -55,23 +55,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\80520\\.nuget\\packages\\": {},
+    "C:\\Users\\LENOVO\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\80520\\source\\repos\\ALLCOM_Test\\ALLCOM_Test.Core\\ALLCOM_Test.Core.csproj",
+      "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\ALLCOM_Test\\ALLCOM_Test.Core\\ALLCOM_Test.Core.csproj",
       "projectName": "ALLCOM_Test.Core",
-      "projectPath": "C:\\Users\\80520\\source\\repos\\ALLCOM_Test\\ALLCOM_Test.Core\\ALLCOM_Test.Core.csproj",
-      "packagesPath": "C:\\Users\\80520\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\80520\\source\\repos\\ALLCOM_Test\\ALLCOM_Test.Core\\obj\\",
+      "projectPath": "C:\\Users\\LENOVO\\Desktop\\ALLCOM_Test\\ALLCOM_Test.Core\\ALLCOM_Test.Core.csproj",
+      "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\LENOVO\\Desktop\\ALLCOM_Test\\ALLCOM_Test.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\80520\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

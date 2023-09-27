@@ -22,3 +22,15 @@ C:\Users\80520\source\repos\ALLCOM_Test - 副本\ALLCOM_Test.Core\obj\x86\Debug\
 C:\Users\80520\source\repos\ALLCOM_Test - 副本\ALLCOM_Test.Core\obj\x86\Debug\net7.0\refint\ALLCOM_Test.Core.dll
 C:\Users\80520\source\repos\ALLCOM_Test - 副本\ALLCOM_Test.Core\obj\x86\Debug\net7.0\ALLCOM_Test.Core.pdb
 C:\Users\80520\source\repos\ALLCOM_Test - 副本\ALLCOM_Test.Core\obj\x86\Debug\net7.0\ref\ALLCOM_Test.Core.dll
+C:\Users\LENOVO\Desktop\ALLCOM_Test\ALLCOM_Test.Core\bin\x86\Debug\net7.0\ALLCOM_Test.Core.deps.json
+C:\Users\LENOVO\Desktop\ALLCOM_Test\ALLCOM_Test.Core\bin\x86\Debug\net7.0\ALLCOM_Test.Core.dll
+C:\Users\LENOVO\Desktop\ALLCOM_Test\ALLCOM_Test.Core\bin\x86\Debug\net7.0\ALLCOM_Test.Core.pdb
+C:\Users\LENOVO\Desktop\ALLCOM_Test\ALLCOM_Test.Core\obj\x86\Debug\net7.0\ALLCOM_Test.Core.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Desktop\ALLCOM_Test\ALLCOM_Test.Core\obj\x86\Debug\net7.0\ALLCOM_Test.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LENOVO\Desktop\ALLCOM_Test\ALLCOM_Test.Core\obj\x86\Debug\net7.0\ALLCOM_Test.Core.AssemblyInfoInputs.cache
+C:\Users\LENOVO\Desktop\ALLCOM_Test\ALLCOM_Test.Core\obj\x86\Debug\net7.0\ALLCOM_Test.Core.AssemblyInfo.cs
+C:\Users\LENOVO\Desktop\ALLCOM_Test\ALLCOM_Test.Core\obj\x86\Debug\net7.0\ALLCOM_Test.Core.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Desktop\ALLCOM_Test\ALLCOM_Test.Core\obj\x86\Debug\net7.0\ALLCOM_Test.Core.dll
+C:\Users\LENOVO\Desktop\ALLCOM_Test\ALLCOM_Test.Core\obj\x86\Debug\net7.0\refint\ALLCOM_Test.Core.dll
+C:\Users\LENOVO\Desktop\ALLCOM_Test\ALLCOM_Test.Core\obj\x86\Debug\net7.0\ALLCOM_Test.Core.pdb
+C:\Users\LENOVO\Desktop\ALLCOM_Test\ALLCOM_Test.Core\obj\x86\Debug\net7.0\ref\ALLCOM_Test.Core.dll

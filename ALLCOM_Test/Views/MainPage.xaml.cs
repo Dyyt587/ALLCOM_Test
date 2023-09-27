@@ -367,4 +367,13 @@ public sealed partial class MainPage : Page
         //dateSource[Convert.ToInt32(str)].DataColor = new SolidColorBrush(sender.Color);
 
     }
+
+    private void ToggleMenuFlyoutItem_Click_Sort(object sender, RoutedEventArgs e)
+    {
+        
+    }
+    private void ToggleMenuFlyoutItem_Click_2(object sender, RoutedEventArgs e)
+    {
+
+    }
 }

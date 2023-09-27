@@ -40,11 +40,15 @@
         </Flyout>
 
         <MenuFlyout  x:Key="DataSortFlyout"  >
-            <ToggleMenuFlyoutItem Text="升序" IsChecked="False"/>
-            <ToggleMenuFlyoutItem Text="降序" IsChecked="True"/>
+            <RadioMenuFlyoutItem Text="升序"/>
+            <RadioMenuFlyoutItem Text="降序"/>
+
             <MenuFlyoutSeparator/>
-            <ToggleMenuFlyoutItem Text="按名字" IsChecked="False"/>
-            <ToggleMenuFlyoutItem Text="按更新频率" IsChecked="True"/>
+            <MenuFlyoutSubItem IsHoldingEnabled="True">
+                <RadioMenuFlyoutItem Text="按名字"/>
+                <RadioMenuFlyoutItem Text="按更新频率"/>
+            </MenuFlyoutSubItem>
+ 
         </MenuFlyout>
 
 
@@ -93,7 +97,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="6.18*"/>
             <ColumnDefinition Width="6"/>
-            <ColumnDefinition Width="1.1*"/>
+            <ColumnDefinition Width="1.1*" MinWidth="180"/>
         </Grid.ColumnDefinitions>
         <controls:GridSplitter Grid.Column="1"   
                                Width="6"
@@ -103,7 +107,7 @@
             </controls:GridSplitter.RenderTransform>
         </controls:GridSplitter>
         <!--开始右边部分-->
-        <Pivot  Grid.Column="2">
+        <Pivot  Grid.Column="2" >
             <PivotItem Header="数据概览">
                 <Grid>
                     <Grid.RowDefinitions>
@@ -135,7 +139,7 @@
                     <!--<Border Grid.Row="1" Background="black" Height="Auto"/>-->
                     <!-- To create this sample, add/change the following properties onto the code for the base example above: -->
 
-                    <!-- XAML Code -->
+                 
 
 
 
