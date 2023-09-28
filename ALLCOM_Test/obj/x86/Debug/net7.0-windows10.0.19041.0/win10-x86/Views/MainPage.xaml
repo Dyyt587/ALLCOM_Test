@@ -39,12 +39,17 @@
             </StackPanel>
         </Flyout>
 
-        <MenuFlyout  x:Key="DataSortFlyout"  >
-            <ToggleMenuFlyoutItem Text="升序" IsChecked="False"/>
-            <ToggleMenuFlyoutItem Text="降序" IsChecked="True"/>
+        <MenuFlyout  x:Key="DataSortFlyout" >
+            
+            <RadioMenuFlyoutItem Text="升序" GroupName="group1" IsChecked="True"  CommandParameter="UP "/>
+            <RadioMenuFlyoutItem Text="降序" GroupName="group1" IsChecked="False"/>
+
             <MenuFlyoutSeparator/>
-            <ToggleMenuFlyoutItem Text="按名字" IsChecked="False"/>
-            <ToggleMenuFlyoutItem Text="按更新频率" IsChecked="True"/>
+            <!--<MenuFlyoutSubItem IsHoldingEnabled="True">-->
+            <RadioMenuFlyoutItem Text="按名字" GroupName="group2"  IsChecked="True"/>
+            <RadioMenuFlyoutItem Text="按更新频率" GroupName="group2"  IsChecked="False"/>
+            <!--</MenuFlyoutSubItem>-->
+ 
         </MenuFlyout>
 
 
@@ -93,7 +98,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="6.18*"/>
             <ColumnDefinition Width="6"/>
-            <ColumnDefinition Width="1.1*"/>
+            <ColumnDefinition Width="1.1*" MinWidth="180"/>
         </Grid.ColumnDefinitions>
         <controls:GridSplitter Grid.Column="1"   
                                Width="6"
@@ -103,7 +108,7 @@
             </controls:GridSplitter.RenderTransform>
         </controls:GridSplitter>
         <!--开始右边部分-->
-        <Pivot  Grid.Column="2">
+        <Pivot  Grid.Column="2" >
             <PivotItem Header="数据概览">
                 <Grid>
                     <Grid.RowDefinitions>
@@ -112,7 +117,7 @@
                     </Grid.RowDefinitions>
                     <Border Grid.Row="0" Background="red" Margin="0,10,0,4"/>
 
-                    <ListView x:ConnectionId='18' Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                    <ListView x:ConnectionId='26' Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                               SelectionMode="Multiple" IsMultiSelectCheckBoxEnabled="False" IsRightTapEnabled="True"
 
                          x:Name="BaseExample"
@@ -134,13 +139,6 @@
                     <Border Grid.Row="0" Background="red" Height="100"/>
                     <!--<Border Grid.Row="1" Background="black" Height="Auto"/>-->
                     <!-- To create this sample, add/change the following properties onto the code for the base example above: -->
-
-                    <!-- XAML Code -->
-
-
-
-
-
 
                 </Grid>
 
@@ -174,6 +172,31 @@
                     <TranslateTransform Y="-2" />
                 </controls:GridSplitter.RenderTransform>
             </controls:GridSplitter>
+
+
+            <CommandBar Grid.Row="2">
+                <AppBarToggleButton x:ConnectionId='18' Icon="Shuffle" Label="Shuffle"                            />
+                <AppBarToggleButton x:ConnectionId='19' Icon="RepeatAll" Label="Repeat"                           />
+                <AppBarSeparator/>
+                <AppBarButton x:ConnectionId='20' Icon="Link" Label="Back"                           />
+                <AppBarButton x:ConnectionId='21' Icon="PreviewLink" Label="Stop"                           />
+                <AppBarToggleButton x:ConnectionId='22' Icon="Play" Label="Play"                                 ToolTipService.ToolTip="开始/暂停"/>
+                <AppBarButton x:ConnectionId='23' Icon="Download" Label="down"                                 ToolTipService.ToolTip="到达最底部"/>
+
+                <CommandBar.SecondaryCommands>
+                    <AppBarButton x:ConnectionId='24' Label="Like"                           />
+                    <AppBarButton x:ConnectionId='25' Label="Dislike"                           />
+                </CommandBar.SecondaryCommands>
+
+                <CommandBar.Content>
+                    <TextBlock Text="Now playing..." Margin="12,14"/>
+                </CommandBar.Content>
+            </CommandBar>
+
+
+
+
+
 
 
             <TabView x:ConnectionId='17' Grid.Column="0" Grid.Row="0" 

@@ -39,9 +39,8 @@ public class MainPage_Singleton : ObservableObject
     {
         get => _DataList_ID;
         set => SetProperty(ref _DataList_ID, value);
-
     }
-
+    public bool Is_up = false;//appbar
     // 定义私有构造函数，使外界不能创建该类实例
     private MainPage_Singleton()
     {
@@ -300,8 +299,8 @@ public sealed partial class MainPage : Page
                         FontIcon icon = new FontIcon();
                         icon.Glyph = "\uED1A";
 
-                        button.Icon = icon;
-                        item.is_View = false;
+                          button.Icon  = icon;
+                         item.is_View = false;
                     }
                     else
                     {
@@ -343,11 +342,54 @@ public sealed partial class MainPage : Page
        // ShowMenu(sender, true);
     }
 
+    private void AppBarButton_Click_Play(object sender, RoutedEventArgs e)
+    {
+        var barbutton = sender as AppBarToggleButton;
+
+        if(barbutton != null)
+        {
+            if(barbutton.IsChecked == true)
+            {
+                FontIcon icon = new FontIcon();
+                icon.Glyph = "\uE769";
+                barbutton.Icon = icon;
+            }
+            else
+            {
+                FontIcon icon = new FontIcon();
+                icon.Glyph = "\uE768";
+                barbutton.Icon = icon;
+            }
+        }
+
+    }
     private void AppBarButton_Click(object sender, RoutedEventArgs e)
     {
 
     }
+    private void AppBarButton_Click_Down(object sender, RoutedEventArgs e)
+    {
+        var barbutton = sender as AppBarButton;
 
+        if (barbutton != null)
+        {
+            
+            if (mainPage_Singleton.Is_up==true)
+            {
+                FontIcon icon = new FontIcon();
+                icon.Glyph = "\uE896";
+                barbutton.Icon = icon;
+                mainPage_Singleton.Is_up=false;
+            }
+            else
+            {
+                FontIcon icon = new FontIcon();
+                icon.Glyph = "\uE898";
+                barbutton.Icon = icon;
+                mainPage_Singleton.Is_up = true;
+            }
+        }
+    }
     private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
     {
         var textBox = sender as TextBox;

@@ -39,15 +39,16 @@
             </StackPanel>
         </Flyout>
 
-        <MenuFlyout  x:Key="DataSortFlyout"  >
-            <RadioMenuFlyoutItem Text="升序"/>
-            <RadioMenuFlyoutItem Text="降序"/>
+        <MenuFlyout  x:Key="DataSortFlyout" >
+            
+            <RadioMenuFlyoutItem Text="升序" GroupName="group1" IsChecked="True"  CommandParameter="UP "/>
+            <RadioMenuFlyoutItem Text="降序" GroupName="group1" IsChecked="False"/>
 
             <MenuFlyoutSeparator/>
-            <MenuFlyoutSubItem IsHoldingEnabled="True">
-                <RadioMenuFlyoutItem Text="按名字"/>
-                <RadioMenuFlyoutItem Text="按更新频率"/>
-            </MenuFlyoutSubItem>
+            <!--<MenuFlyoutSubItem IsHoldingEnabled="True">-->
+            <RadioMenuFlyoutItem Text="按名字" GroupName="group2"  IsChecked="True"/>
+            <RadioMenuFlyoutItem Text="按更新频率" GroupName="group2"  IsChecked="False"/>
+            <!--</MenuFlyoutSubItem>-->
  
         </MenuFlyout>
 
@@ -139,13 +140,6 @@
                     <!--<Border Grid.Row="1" Background="black" Height="Auto"/>-->
                     <!-- To create this sample, add/change the following properties onto the code for the base example above: -->
 
-                 
-
-
-
-
-
-
                 </Grid>
 
 
@@ -178,6 +172,31 @@
                     <TranslateTransform Y="-2" />
                 </controls:GridSplitter.RenderTransform>
             </controls:GridSplitter>
+
+
+            <CommandBar Grid.Row="2">
+                <AppBarToggleButton Icon="Shuffle" Label="Shuffle" Click="AppBarButton_Click" />
+                <AppBarToggleButton Icon="RepeatAll" Label="Repeat" Click="AppBarButton_Click"/>
+                <AppBarSeparator/>
+                <AppBarButton Icon="Link" Label="Back" Click="AppBarButton_Click"/>
+                <AppBarButton Icon="PreviewLink" Label="Stop" Click="AppBarButton_Click"/>
+                <AppBarToggleButton Icon="Play" Label="Play" Click="AppBarButton_Click_Play" ToolTipService.ToolTip="开始/暂停"/>
+                <AppBarButton Icon="Download" Label="down" Click="AppBarButton_Click_Down" ToolTipService.ToolTip="到达最底部"/>
+
+                <CommandBar.SecondaryCommands>
+                    <AppBarButton Label="Like" Click="AppBarButton_Click"/>
+                    <AppBarButton Label="Dislike" Click="AppBarButton_Click"/>
+                </CommandBar.SecondaryCommands>
+
+                <CommandBar.Content>
+                    <TextBlock Text="Now playing..." Margin="12,14"/>
+                </CommandBar.Content>
+            </CommandBar>
+
+
+
+
+
 
 
             <TabView Grid.Column="0" Grid.Row="0" 
